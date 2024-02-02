@@ -89,12 +89,12 @@ const Page = () => {
   }, [session?.user?.email]);
   return (
     <>
-      <div>
-        <div>
+      <div className="">
+        <div className="">
           {currentUser?.["role"] === "admin" ? <AddHackathon /> : <></>}
         </div>
-        Ongoing
-        <div className="shadow-md rounded-md p-4">
+        <div className="mx-4 mt-4">Ongoing</div>
+        <div className="shadow-md rounded-md p-4 border mx-4 border-gray-600">
           <table className="min-w-full overflow-x-auto">
             <thead className="uppercase bg-gray-50 dark:bg-gray-700 text-gray-100">
               <tr>
@@ -135,11 +135,11 @@ const Page = () => {
                           Website
                         </a>
                       </td>
-                      <td className="py-2 px-3 text-sm">
+                      <td className="py-2 px-3 text-sm ">
                         {hackathon?.["description"]}
                       </td>
-                      <td className="py-2 px-3 text-sm">
-                        <div className="flex flex-row">
+                      <td className="py-2 px-3 text-sm ">
+                        <div className="flex flex-row ">
                           {(currentUser as any)?.hackathon.map(
                             (h: any, index: any) => {
                               h === hackathon?.["_id"] ? setReg(true) : null;
@@ -166,8 +166,8 @@ const Page = () => {
             </tbody>
           </table>
         </div>
-        Closed
-        <div className="shadow-md rounded-md p-4">
+        <div className="mx-4 mt-4">Closed</div>
+        <div className="shadow-md rounded-md p-4 border mx-4 border-gray-600">
           <table className="min-w-full overflow-x-auto">
             <thead className="uppercase bg-gray-50 dark:bg-gray-700 text-gray-100">
               <tr>
@@ -211,8 +211,8 @@ const Page = () => {
                       <td className="py-2 px-3 text-sm">
                         {hackathon?.["description"]}
                       </td>
-                      <td className="py-2 px-3 text-sm">
-                        <div className="flex flex-row">
+                      <td className="py-2 px-3 text-sm ">
+                        <div className="flex flex-row ">
                           {(currentUser as any)?.hackathon.map(
                             (h: any, index: any) => {
                               h === hackathon?.["_id"] ? setReg(true) : null;
