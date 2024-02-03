@@ -470,25 +470,27 @@ const Page = () => {
 
         </div>
         {/* this is end of profile */}
+        <div className="">
         Ongoing
+        </div>
         <div className=" rounded-xl ">
           <table className="min-w-full overflow-x-auto border-gray-600 border  mb-4 rounded-xl container">
             <thead className="uppercase bg-gray-50 dark:bg-gray-700 text-gray-100 ">
               <tr>
                 <th className="px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider ">
-                  Hackathon Name
+                  <span className="">Hackathon Name</span>
+                </th>
+                <th className="px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider ">
+                  <span className="invisible md:visible">Deadline</span>
                 </th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider">
-                  Deadline
+                  <span className=" invisible md:visible">Link</span>
                 </th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider">
-                  Link
+                <span className=" invisible md:visible">Description</span>
                 </th>
                 <th className="px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider">
-                  Description
-                </th>
-                <th className="px-6 py-3 text-left text-sm font-medium text-gray-300 uppercase tracking-wider">
-                  Apply
+                <span className=" ">Apply</span>
                 </th>
               </tr>
             </thead>
@@ -505,7 +507,7 @@ const Page = () => {
                         <a
                           href={hackathon.link}
                           target="_blank"
-                          className="text-blue-500"
+                          className="text-blue-500 "
                         >
                           Website
                         </a>
@@ -604,7 +606,7 @@ const Page = () => {
               }
             )}
           </div>
-          <div className="grid grid-cols-3 grid-rows-3 gap-4">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4   grid-rows-3 gap-4 ">
             {repoShown.map((repo, i) => (
               <div className="border border-gray-600 rounded-md px-2 py-2">
                 <div className="flex items-center justify-between mb-4">
